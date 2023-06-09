@@ -11,17 +11,31 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25dp"
+        android:textSize="50dp"
         android:text="@string/app_name" />
 
     <EditText
         android:id="@+id/inputName"
-        android:hint="Please enter your name"
+        android:layout_marginTop="25dp"
+        android:inputType="text"
+        android:textSize="48dp"
+        android:hint="Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/inputAge"
+        android:textSize="48dp"
+        android:layout_marginTop="25dp"
+        android:hint="Age"
+        android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/submitButton"
+        android:textSize="48dp"
+        android:layout_marginTop="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"/>
