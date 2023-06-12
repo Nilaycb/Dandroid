@@ -88,7 +88,7 @@ public class WelcomeActivity extends AppCompatActivity {
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dbHelper.updateRecord(demo_newRowId, "Droid", 100);
+                dbHelper.updateRecord(demo_newRowId, "Droid", 10);
                 Cursor cursorUpdate = dbHelper.getRecordById(demo_newRowId);
                 if(cursorUpdate.moveToFirst()) {
                     int id = cursorUpdate.getInt(cursorUpdate.getColumnIndexOrThrow(dbHelper.COLUMN_ID));
@@ -111,7 +111,7 @@ public class WelcomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 boolean isDeleted = dbHelper.deleteRecordById(demo_newRowId);
                 if(isDeleted) {
-                    Toast.makeText(getApplicationContext(), "Data successfully deleted! (ID: " + demo_newRowId + ")", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Data successfully dele! (ID: " + demo_newRowId + ")", Toast.LENGTH_LONG).show();
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "Date couldn't be deleted! (ID: " + demo_newRowId + ")", Toast.LENGTH_LONG).show();
